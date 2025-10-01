@@ -5,10 +5,11 @@ import os
 
 st.set_page_config(page_title="Settings", page_icon="⚙️", layout="wide")
 
-def load_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-load_css("style.css")
+from theme_loader import apply_global_theme
+from language_system import get_text
+
+apply_global_theme()
+t = get_text
 
 # Settings file path
 SETTINGS_FILE = "lumaair_settings.json"
@@ -56,8 +57,8 @@ st.markdown("""
             ⚙️
         </div>
         <div style="text-align: left;">
-            <h2 style="margin: 0; color: #f8fafc; font-size: 1.8rem; font-weight: 700;">LumaAir Settings</h2>
-            <p style="margin: 0; color: #94a3b8; font-size: 0.95rem;">Customize your air quality monitoring experience</p>
+            <h2 style="margin: 0; color: #f8fafc; font-size: 1.8rem; font-weight: 700;">{t('settings_title')}</h2>
+            <p style="margin: 0; color: #94a3b8; font-size: 0.95rem;">{t('settings_subtitle')}</p>
         </div>
     </div>
 </div>
@@ -71,7 +72,7 @@ with col1:
     <div class="glass-card">
         <h3 style="color: #f8fafc; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
             <span style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); border-radius: 8px; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem;">🎨</span>
-            App Preferences
+            {t('app_preferences')}
         </h3>
     </div>
     """, unsafe_allow_html=True)

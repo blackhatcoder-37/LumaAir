@@ -10,9 +10,12 @@ load_dotenv()
 
 st.set_page_config(page_title="Weather Forecast", page_icon="☁️", layout="wide")
 
-# --- Load Theme ---
+# --- Load Theme and Language ---
 from theme_loader import apply_global_theme
+from language_system import get_text
+
 apply_global_theme()
+t = get_text
 
 # Real API Key for weather data
 API_KEY = os.getenv("RAPIDAPI_KEY", "797baaae03msh3e64748769dd1a6p154df7jsn05cea50abd53")
@@ -137,13 +140,13 @@ def display_weather(forecast_data):
     with col3:
         st.markdown(f"""
         <div class="info-card">
-            <div class="label">🌡️ Feels Like</div>
+            <div class="label">{t('feels_like')}</div>
                         <div class="value">{feels_like_display}</div>
         </div>
         """, unsafe_allow_html=True)
 
     st.divider()
-    st.subheader("5-Day Forecast")
+    st.subheader(t('5_day_forecast'))
 
     # --- 5-Day Forecast Cards ---
     daily_forecasts = {}
@@ -174,10 +177,10 @@ def display_weather(forecast_data):
 # ==============================================================================
 # --- APP LOGIC ---
 # ==============================================================================
-st.title("☁️ Weather Forecast")
-st.markdown("#### Real-time weather information for major Indian cities")
+st.title(f"🌤️ {t('weather_forecast')}")
+st.markdown(f"#### {t('weather_subtitle')}")
 
-st.sidebar.header("City Selection")
+st.sidebar.header(t('city_selection'))
 city_options = {
     "New Delhi, India": (28.6139, 77.2090),
     "Chennai, India": (13.0827, 80.2707),
@@ -187,21 +190,21 @@ city_options = {
     "Hyderabad, India": (17.3850, 78.4867),
     "Pune, India": (18.5204, 73.8567)
 }
-selected_city = st.sidebar.selectbox("Choose a city:", list(city_options.keys()))
+selected_city = st.sidebar.selectbox(t('choose_city'), list(city_options.keys()))
 
-if st.sidebar.button("🌤️ Get Weather Forecast"):
+if st.sidebar.button(t('get_weather_forecast')):
     lat, lon = city_options[selected_city]
-    with st.spinner(f"Fetching weather for {selected_city}..."):
+    with st.spinner(f"{t('fetching_weather')} {selected_city}..."):
         forecast = get_5_day_forecast(lat, lon)
     if forecast:
         display_weather(forecast)
     else:
-        st.error("Failed to retrieve forecast.")
+        st.error(t('failed_retrieve'))
 else:
-    st.info("Choose a city and click the button to see the weather forecast.")
+    st.info(t('choose_city_info'))
 
 # --- API Key Setup Instructions ---
-with st.expander("🔧 Setup Instructions"):
+with st.expander(t('setup_instructions')):
     st.markdown("""
     **To get live weather data:**
     1. Sign up at [RapidAPI](https://rapidapi.com/)

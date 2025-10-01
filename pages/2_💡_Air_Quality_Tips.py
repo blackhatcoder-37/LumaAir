@@ -4,14 +4,17 @@ import streamlit as st
 st.set_page_config(page_title="Air Quality Tips", page_icon="💡", layout="wide")
 
 from theme_loader import apply_global_theme
+from language_system import get_text
+
 apply_global_theme()
+t = get_text
 
-st.title("💡 Tips to Improve Air Quality")
-st.markdown("#### Practical advice to breathe cleaner air and reduce pollution")
+st.title("💡 Air Quality Improvement Tips")
+st.markdown("#### Simple steps to breathe cleaner air")
 
-st.markdown("""
+st.markdown(f"""
 <div class="glass-card">
-    <h3>🏠 Indoor Air Quality</h3>
+    <h3>🏠 {t('indoor_tips')}</h3>
     <ul>
         <li><b>Ventilate your home:</b> Open windows for a few minutes each day to allow fresh air to circulate.</li>
         <li><b>Use exhaust fans:</b> Turn on fans in kitchens and bathrooms to remove cooking fumes and moisture.</li>
@@ -23,9 +26,9 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-st.markdown("""
+st.markdown(f"""
 <div class="glass-card">
-    <h3>🌍 Outdoor Air Quality & Personal Safety</h3>
+    <h3>🌳 {t('outdoor_tips')}</h3>
     <ul>
         <li><b>Use public transport, cycle, or walk:</b> Reduce reliance on personal vehicles, especially during high-pollution days.</li>
         <li><b>Conserve energy:</b> Turn off lights and electronics when not in use.</li>

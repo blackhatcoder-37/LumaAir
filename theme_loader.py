@@ -23,9 +23,11 @@ def apply_global_theme():
             color: #1e293b !important;
         }
         
-        /* Sidebar styling for light theme */
+        /* Transparent sidebar styling for light theme */
         .css-1d391kg, .css-1lcbmhc, .css-1outpf7, .stSidebar, .css-1cypcdb {
-            background-color: rgba(248, 250, 252, 0.95) !important;
+            background-color: rgba(248, 250, 252, 0.3) !important;
+            backdrop-filter: blur(15px) !important;
+            border-right: 1px solid rgba(148, 163, 184, 0.2) !important;
             color: #1e293b !important;
         }
         

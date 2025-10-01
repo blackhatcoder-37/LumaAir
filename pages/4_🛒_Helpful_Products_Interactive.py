@@ -4,7 +4,10 @@ import streamlit as st
 st.set_page_config(page_title="Helpful Products", page_icon="🛒", layout="wide")
 
 from theme_loader import apply_global_theme
+from language_system import get_text
+
 apply_global_theme()
+t = get_text
 
 # Custom CSS for clickable product cards
 st.markdown("""
@@ -50,8 +53,8 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.title("🛒 Helpful Products for Better Air Quality")
-st.markdown("#### Click the buttons below each product to shop on Amazon or Flipkart")
+st.title(f"🛒 {t('shopping_title')}")
+st.markdown(f"#### {t('shopping_subtitle')}")
 
 # Product data with real links
 products = {
@@ -169,11 +172,11 @@ for i, product in enumerate(products["air_purifiers"]):
         with col1:
             if st.button("🛒 Buy on Amazon", key=f"amazon_purifier_{i}", use_container_width=True):
                 st.success(f"Opening Amazon for {product['name']}...")
-                st.markdown(f"**[🔗 Click here to open Amazon]({product['amazon_link']})**")
+                st.markdown(f"**[{t('click_amazon')}]({product['amazon_link']})**")
         with col2:
             if st.button("🛍️ Buy on Flipkart", key=f"flipkart_purifier_{i}", use_container_width=True):
                 st.success(f"Opening Flipkart for {product['name']}...")
-                st.markdown(f"**[🔗 Click here to open Flipkart]({product['flipkart_link']})**")
+                st.markdown(f"**[{t('click_flipkart')}]({product['flipkart_link']})**")
 
 st.divider()
 
@@ -202,11 +205,11 @@ for i, product in enumerate(products["masks"]):
         with col1:
             if st.button("🛒 Buy on Amazon", key=f"amazon_mask_{i}", use_container_width=True):
                 st.success(f"Opening Amazon for {product['name']}...")
-                st.markdown(f"**[🔗 Click here to open Amazon]({product['amazon_link']})**")
+                st.markdown(f"**[{t('click_amazon')}]({product['amazon_link']})**")
         with col2:
             if st.button("🛍️ Buy on Flipkart", key=f"flipkart_mask_{i}", use_container_width=True):
                 st.success(f"Opening Flipkart for {product['name']}...")
-                st.markdown(f"**[🔗 Click here to open Flipkart]({product['flipkart_link']})**")
+                st.markdown(f"**[{t('click_flipkart')}]({product['flipkart_link']})**")
 
 st.divider()
 
@@ -235,11 +238,11 @@ for i, product in enumerate(products["plants"]):
         with col1:
             if st.button("🛒 Buy on Amazon", key=f"amazon_plant_{i}", use_container_width=True):
                 st.success(f"Opening Amazon for {product['name']}...")
-                st.markdown(f"**[🔗 Click here to open Amazon]({product['amazon_link']})**")
+                st.markdown(f"**[{t('click_amazon')}]({product['amazon_link']})**")
         with col2:
             if st.button("🛍️ Buy on Flipkart", key=f"flipkart_plant_{i}", use_container_width=True):
                 st.success(f"Opening Flipkart for {product['name']}...")
-                st.markdown(f"**[🔗 Click here to open Flipkart]({product['flipkart_link']})**")
+                st.markdown(f"**[{t('click_flipkart')}]({product['flipkart_link']})**")
 
 # Shopping tips
 st.markdown("""
