@@ -1,0 +1,11 @@
+{
+  "theme": "dark",
+  "default_site": 1,
+  "notifications": true,
+  "auto_refresh": false,
+  "language": "English",
+  "units": "metric",
+  "forecast_hours": 24,
+  "show_coordinates": true,
+  "api_timeout": 30
+}
