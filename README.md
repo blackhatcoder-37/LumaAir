@@ -21,6 +21,34 @@ LumaAir is a next-generation air quality forecasting platform that combines mach
 - 📊 **7 Monitoring Sites** - Real Delhi locations with coordinates
 - 📱 **Responsive Design** - Modern dashboard with interactive animations
 
+## 🚀 **Quick Start**
+
+### **Prerequisites:**
+```bash
+# Python 3.8+
+pip install -r requirements.txt
+```
+
+### **Installation & Setup:**
+```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/LumaAir.git
+cd LumaAir
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the application
+streamlit run Home.py
+```
+
+### **Environment Variables:**
+```bash
+# Create .env file for API keys
+GOOGLE_API_KEY=your_gemini_api_key
+RAPIDAPI_KEY=your_weather_api_key
+```
+
 ## 🏗️ **Architecture**
 
 ### **Core Components:**
@@ -28,6 +56,7 @@ LumaAir is a next-generation air quality forecasting platform that combines mach
 - **Weather Module** - RapidAPI integration with temperature conversion
 - **AI Assistant** - Google Gemini chatbot for health guidance
 - **Product Recommendations** - Amazon/Flipkart integration
+- **Pretrained Models** - 7-site O₃/NO₂ prediction system
 - **Multi-Language System** - Complete i18n support
 - **Theme Engine** - Dynamic styling with CSS-in-JS
 
