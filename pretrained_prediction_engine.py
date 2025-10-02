@@ -39,7 +39,7 @@ class PretrainedPredictionEngine:
                 
                 # Load O3 and NO2 models for each site
                 for pollutant in self.pollutants:
-                    model_file = f"site_{site_id}_model_{pollutant.lower()}.pkl"
+                    model_file = f"models/site_models/site_{site_id}_model_{pollutant.lower()}.pkl"
                     try:
                         with open(model_file, 'rb') as f:
                             self.models[site_id][pollutant] = pickle.load(f)
@@ -48,7 +48,7 @@ class PretrainedPredictionEngine:
                         continue
                 
                 # Load features for each site
-                features_file = f"site_{site_id}_features.pkl"
+                features_file = f"models/features/site_{site_id}_features.pkl"
                 try:
                     with open(features_file, 'rb') as f:
                         self.features[site_id] = pickle.load(f)
