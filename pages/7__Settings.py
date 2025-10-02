@@ -57,8 +57,8 @@ st.markdown("""
             ⚙️
         </div>
         <div style="text-align: left;">
-            <h2 style="margin: 0; color: #f8fafc; font-size: 1.8rem; font-weight: 700;">{t('settings_title')}</h2>
-            <p style="margin: 0; color: #94a3b8; font-size: 0.95rem;">{t('settings_subtitle')}</p>
+            <h2 style="margin: 0; color: #f8fafc; font-size: 1.8rem; font-weight: 700;">Settings</h2>
+            <p style="margin: 0; color: #94a3b8; font-size: 0.95rem;">Customize your LumaAir experience</p>
         </div>
     </div>
 </div>
@@ -72,7 +72,7 @@ with col1:
     <div class="glass-card">
         <h3 style="color: #f8fafc; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
             <span style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); border-radius: 8px; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem;">🎨</span>
-            {t('app_preferences')}
+            App Preferences
         </h3>
     </div>
     """, unsafe_allow_html=True)
