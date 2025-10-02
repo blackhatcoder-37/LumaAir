@@ -2,6 +2,7 @@
 
 > **Advanced Air Quality Forecasting & Health Solutions**
 
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Try_Now!-success?style=for-the-badge&labelColor=4B8BBE&color=306998)](https://lumaair-uyifzqdtklta8aacur7dxv.streamlit.app/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)](https://streamlit.io/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org/)
 [![AI](https://img.shields.io/badge/Google-Gemini_AI-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
@@ -10,16 +11,8 @@
 
 LumaAir is a next-generation air quality forecasting platform that combines machine learning, real-time weather data, and health-focused solutions to help people make informed decisions about air quality in Delhi, India.
 
-### ✨ **Key Features**
-
-- 🧠 **AI-Powered Predictions** - 24-hour forecasts for O₃ and NO₂ concentrations
-- 🌍 **Multi-Language Support** - English, Hindi, Spanish, French
-- 🎨 **Dynamic Themes** - Light and Dark modes with glassmorphism design
-- 🌡️ **Weather Integration** - Real-time weather data with unit conversion
-- 🤖 **AI Chatbot** - Powered by Google Gemini 2.5 for air quality guidance
-- 🛒 **Smart Shopping** - Curated air purifiers, masks, and plants
-- 📊 **7 Monitoring Sites** - Real Delhi locations with coordinates
-- 📱 **Responsive Design** - Modern dashboard with interactive animations
+### 🌐 **Live Demo:** 
+**👉 [Try LumaAir Now!](https://lumaair-uyifzqdtklta8aacur7dxv.streamlit.app/) 👈**
 
 ## 🚀 **Quick Start**
 
