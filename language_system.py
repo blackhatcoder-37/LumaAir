@@ -18,6 +18,10 @@ TRANSLATIONS = {
         "weather_title": "☁️ Live Weather Conditions",
         "select_location": "Select Location",
         "get_weather": "🌤️ Get Weather Data",
+        "get_weather_forecast": "🌤️ Get Weather Forecast",
+        "city_selection": "🏙️ City Selection",
+        "choose_city": "Choose a City",
+        "fetching_weather": "📡 Fetching weather data for",
         "temperature": "🌡️ Temperature",
         "feels_like": "🌡️ Feels Like",
         "wind_speed": "💨 Wind Speed",
@@ -97,6 +101,10 @@ TRANSLATIONS = {
         
         # Weather Page
         "weather_forecast": "मौसम पूर्वानुमान",
+        "get_weather_forecast": "🌤️ मौसम पूर्वानुमान प्राप्त करें",
+        "city_selection": "🏙️ शहर चयन",
+        "choose_city": "एक शहर चुनें",
+        "fetching_weather": "📡 मौसम डेटा प्राप्त कर रहा है",
         "weather_title": "☁️ लाइव मौसम की स्थिति",
         "select_location": "स्थान चुनें",
         "get_weather": "🌤️ मौसम डेटा प्राप्त करें",
@@ -179,6 +187,10 @@ TRANSLATIONS = {
         
         # Weather Page
         "weather_forecast": "Pronóstico del Tiempo",
+        "get_weather_forecast": "🌤️ Obtener Pronóstico del Tiempo",
+        "city_selection": "🏙️ Selección de Ciudad",
+        "choose_city": "Elige una Ciudad",
+        "fetching_weather": "📡 Obteniendo datos meteorológicos para",
         "weather_title": "☁️ Condiciones Meteorológicas en Vivo",
         "select_location": "Seleccionar Ubicación",
         "get_weather": "🌤️ Obtener Datos Meteorológicos",
@@ -261,6 +273,10 @@ TRANSLATIONS = {
         
         # Weather Page
         "weather_forecast": "Prévisions Météorologiques",
+        "get_weather_forecast": "🌤️ Obtenir les Prévisions Météo",
+        "city_selection": "🏙️ Sélection de Ville",
+        "choose_city": "Choisissez une Ville",
+        "fetching_weather": "📡 Récupération des données météo pour",
         "weather_title": "☁️ Conditions Météorologiques en Direct",
         "select_location": "Sélectionner l'Emplacement",
         "get_weather": "🌤️ Obtenir les Données Météo",

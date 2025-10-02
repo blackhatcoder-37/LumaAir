@@ -30,7 +30,13 @@ def get_5_day_forecast(latitude, longitude):
     }
     
     try:
-        response = requests.get(url, headers=headers, params=querystring)
+        response = requests.get(url, headers=headers, params=querystring, timeout=10)
+        
+        # Handle rate limiting (429 error)
+        if response.status_code == 429:
+            st.warning("⚠️ Weather API rate limit reached. Showing demo data instead.")
+            return get_demo_weather_data(latitude, longitude)
+        
         response.raise_for_status()
         data = response.json()
         
@@ -42,46 +48,52 @@ def get_5_day_forecast(latitude, longitude):
         return data
     except requests.exceptions.RequestException as e:
         st.error(f"Error fetching weather data: {e}")
-        st.warning("Falling back to demo data...")
-        return get_demo_weather_data()
+        st.info("📊 Showing demo weather data instead.")
+        return get_demo_weather_data(latitude, longitude)
 
 # --- Demo Data Function ---
-def get_demo_weather_data():
-    return {
-        "city": {"name": "New Delhi"},
-        "list": [
-            {
-                "dt_txt": "2025-10-01 12:00:00",
-                "main": {"temp": 32, "humidity": 65, "feels_like": 35},
-                "weather": [{"description": "partly cloudy", "icon": "02d"}],
-                "wind": {"speed": 2.5}
-            },
-            {
-                "dt_txt": "2025-10-02 12:00:00",
-                "main": {"temp": 30, "humidity": 70, "feels_like": 33},
-                "weather": [{"description": "cloudy", "icon": "03d"}],
-                "wind": {"speed": 3.0}
-            },
-            {
-                "dt_txt": "2025-10-03 12:00:00",
-                "main": {"temp": 28, "humidity": 75, "feels_like": 31},
-                "weather": [{"description": "light rain", "icon": "10d"}],
-                "wind": {"speed": 3.5}
-            },
-            {
-                "dt_txt": "2025-10-04 12:00:00",
-                "main": {"temp": 29, "humidity": 68, "feels_like": 32},
-                "weather": [{"description": "sunny", "icon": "01d"}],
-                "wind": {"speed": 2.0}
-            },
-            {
-                "dt_txt": "2025-10-05 12:00:00",
-                "main": {"temp": 31, "humidity": 60, "feels_like": 34},
-                "weather": [{"description": "clear sky", "icon": "01d"}],
-                "wind": {"speed": 2.2}
-            }
-        ]
+def get_demo_weather_data(latitude=28.6139, longitude=77.2090):
+    """Generate realistic demo weather data when API fails"""
+    import random
+    from datetime import datetime, timedelta
+    
+    demo_data = {
+        "city": {"name": "Delhi", "country": "IN"},
+        "list": []
     }
+    
+    # Generate 5 days of demo weather data
+    base_temp = 25 + random.uniform(-5, 10)  # Base temperature around 25°C
+    
+    for i in range(5):
+        day_date = datetime.now() + timedelta(days=i)
+        daily_temp = base_temp + random.uniform(-3, 3)
+        
+        weather_conditions = [
+            {"main": "Clear", "description": "clear sky", "icon": "01d"},
+            {"main": "Clouds", "description": "few clouds", "icon": "02d"},
+            {"main": "Clouds", "description": "scattered clouds", "icon": "03d"},
+            {"main": "Haze", "description": "haze", "icon": "50d"}
+        ]
+        
+        condition = random.choice(weather_conditions)
+        
+        demo_data["list"].append({
+            "dt": int(day_date.timestamp()),
+            "main": {
+                "temp": daily_temp,
+                "feels_like": daily_temp + random.uniform(-2, 2),
+                "humidity": random.randint(40, 80),
+                "pressure": random.randint(1010, 1020)
+            },
+            "weather": [condition],
+            "wind": {
+                "speed": random.uniform(2, 8)
+            },
+            "dt_txt": day_date.strftime("%Y-%m-%d 12:00:00")
+        })
+    
+    return demo_data
 
 # --- Temperature Conversion Function ---
 def convert_temp(temp_kelvin, units="Metric"):
