@@ -46,6 +46,8 @@ TRANSLATIONS = {
         
         # Products
         "products_title": "🛒 Helpful Products for Air Quality",
+        "shopping_title": "Helpful Products for Air Quality",
+        "shopping_subtitle": "Discover products to improve your air quality and health",
         "air_purifiers": "🌬️ Air Purifiers",
         "masks_section": "😷 Protection Masks", 
         "plants_section": "🌱 Air Purifying Plants",
@@ -132,6 +134,8 @@ TRANSLATIONS = {
         
         # Products
         "products_title": "🛒 वायु गुणवत्ता के लिए उपयोगी उत्पाद",
+        "shopping_title": "वायु गुणवत्ता के लिए उपयोगी उत्पाद",
+        "shopping_subtitle": "अपनी वायु गुणवत्ता और स्वास्थ्य में सुधार के लिए उत्पाद खोजें",
         "air_purifiers": "🌬️ एयर प्यूरिफायर",
         "masks_section": "😷 सुरक्षा मास्क",
         "plants_section": "🌱 वायु शुद्ध करने वाले पौधे",
@@ -218,6 +222,8 @@ TRANSLATIONS = {
         
         # Products
         "products_title": "🛒 Productos Útiles para la Calidad del Aire",
+        "shopping_title": "Productos Útiles para la Calidad del Aire",
+        "shopping_subtitle": "Descubre productos para mejorar tu calidad del aire y salud",
         "air_purifiers": "🌬️ Purificadores de Aire",
         "masks_section": "😷 Máscaras de Protección",
         "plants_section": "🌱 Plantas Purificadoras de Aire",
@@ -304,6 +310,8 @@ TRANSLATIONS = {
         
         # Products
         "products_title": "🛒 Produits Utiles pour la Qualité de l'Air",
+        "shopping_title": "Produits Utiles pour la Qualité de l'Air",
+        "shopping_subtitle": "Découvrez des produits pour améliorer votre qualité de l'air et votre santé",
         "air_purifiers": "🌬️ Purificateurs d'Air",
         "masks_section": "😷 Masques de Protection",
         "plants_section": "🌱 Plantes Purificatrices d'Air",
