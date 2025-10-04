@@ -1,12 +1,11 @@
 # 🌟 LumaAir Intelligence Platform
 
-> **Advanced Air Quality Forecasting & Health Solutions**
+> Advanced Air Quality Forecasting & Health Solutions
 
 [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Try_Now!-success?style=for-the-badge&labelColor=4B8BBE&color=306998)](https://lumaair-uyifzqdtklta8aacur7dxv.streamlit.app/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)](https://streamlit.io/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org/)
 [![AI](https://img.shields.io/badge/Google-Gemini_AI-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
-
 ## 🎯 **Overview**
 
 LumaAir is a next-generation air quality forecasting platform that combines machine learning, real-time weather data, and health-focused solutions to help people make informed decisions about air quality in Delhi, India.
