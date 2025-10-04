@@ -2,7 +2,6 @@
 
 ## Project Status: ✅ COMPLETED
 Date: October 1, 2025
-Application URL: http://localhost:8513
 
 ## 📊 New Feature Added: Pretrained Data Predictions
 
