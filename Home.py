@@ -296,7 +296,7 @@ with footer_col1:
     st.markdown("""
     <div style="padding: 0.5rem;">
         <p style="margin: 0; color: #64748b; font-size: 0.9rem;">
-            🌟 **LumaAir Intelligence Platform** - Advanced air quality forecasting with live weather integration.<br>
+            🌟 LumaAir Intelligence Platform- Advanced air quality forecasting with live weather integration.<br>
             🔬 Predictions update daily with real weather conditions from RapidAPI.
         </p>
     </div>
