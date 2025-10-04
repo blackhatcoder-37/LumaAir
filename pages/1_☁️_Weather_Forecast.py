@@ -189,8 +189,8 @@ def display_weather(forecast_data):
 # ==============================================================================
 # --- APP LOGIC ---
 # ==============================================================================
-st.title(f"🌤️ {t('weather_forecast')}")
-st.markdown(f"#### {t('weather_subtitle')}")
+st.title(f"🌤️ {t('weather forecast')}")
+st.markdown(f"#### {t('weather subtitle')}")
 
 st.sidebar.header(t('city_selection'))
 city_options = {
