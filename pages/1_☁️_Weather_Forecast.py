@@ -211,12 +211,12 @@ if st.sidebar.button(t('get_weather_forecast')):
     if forecast:
         display_weather(forecast)
     else:
-        st.error(t('failed_retrieve'))
+        st.error(t('failed retrieve'))
 else:
-    st.info(t('choose_city_info'))
+    st.info(t('Choose City Info'))
 
 # --- API Key Setup Instructions ---
-with st.expander(t('setup_instructions')):
+with st.expander(t('setup instructions')):
     st.markdown("""
     **To get live weather data:**
     1. Sign up at [RapidAPI](https://rapidapi.com/)
